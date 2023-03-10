@@ -1,0 +1,37 @@
+<mat-card *ngIf="heroe">
+  <mat-card-header>
+    <mat-card-title>
+      {{ heroe.superhero }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ heroe.alter_ego }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img
+    [src]="heroe | imagen"
+    [alt]="heroe.superhero"
+  >
+  <mat-card-content>
+    <h3>{{ heroe.publisher }}</h3>
+    <p>
+      <strong class="block">Primera aparición: {{ heroe.first_appearance }}</strong>
+      <strong>Personajes: {{ heroe.characters }}</strong>
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button
+      mat-button
+      color="accent"
+      [routerLink]="['/heroes', heroe.id]"
+    >
+      Leer más...
+    </button>
+    <button
+      mat-button
+      [routerLink]="['/heroes/editar', heroe.id]"
+    >
+      Editar
+    </button>
+  </mat-card-actions>
+</mat-card>

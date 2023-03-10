@@ -9,7 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
-    path: '', // heroes
+    path: '', // interfaces
     component: HomeComponent, // ruta padre
     children: [
       // rutas hijas

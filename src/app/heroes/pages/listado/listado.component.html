@@ -1,1 +1,8 @@
-<p>listado works!</p>
+<h1>Listado de Héroes</h1>
+
+<div class="grid my-2 animate__animated animate__fadeIn">
+  <app-heroe-tarjeta
+    [heroe]="heroe"
+    *ngFor="let heroe of heroes">
+  </app-heroe-tarjeta>
+</div>

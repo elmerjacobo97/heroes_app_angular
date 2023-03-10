@@ -1,1 +1,29 @@
-<p>heroe works!</p>
+<mat-grid-list cols="1" *ngIf="!heroe; else divHeroe">
+  <mat-grid-tile>
+    <mat-spinner color="accent"></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divHeroe>
+  <div class="heroe animate__animated animate__fadeIn">
+    <div>
+      <h2>
+        {{ heroe.superhero }} -
+        <small>{{ heroe.alter_ego }}</small>
+      </h2>
+      <img [src]="heroe | imagen" [alt]="heroe.id">
+    </div>
+    <div>
+      <mat-list>
+        <mat-list-item>{{ heroe.first_appearance }}</mat-list-item>
+        <mat-list-item>{{ heroe.characters }}</mat-list-item>
+        <mat-list-item>{{ heroe.publisher }}</mat-list-item>
+        <mat-list-item>{{ heroe.alter_ego }}</mat-list-item>
+      </mat-list>
+
+      <button mat-button color="accent" (click)="regresar()">
+        Regresar
+      </button>
+    </div>
+  </div>
+</ng-template>

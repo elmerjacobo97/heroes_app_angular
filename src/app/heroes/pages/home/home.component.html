@@ -1,5 +1,33 @@
-<h1>HeroesApp</h1>
-<hr>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav>
+    <mat-toolbar>
+      <h2>Menu</h2>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a routerLink="./listado" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon matListItemIcon>label</mat-icon>
+        Listado de Personajes
+      </a>
+      <a routerLink="./agregar" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon matListItemIcon>add</mat-icon>
+        Agregar
+      </a><a routerLink="./buscar" mat-list-item (click)="sidenav.toggle()">
+      <mat-icon matListItemIcon>search</mat-icon>
+      Buscar
+    </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-toolbar class="spacer">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button mat-icon-button color="warn">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
 
-<!-- Aquí inyecto el contenido de las rutas hijas del module "heroes" -->
-<router-outlet></router-outlet>
+  <!--  Inyectar el contenido de las rutas hijas -->
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

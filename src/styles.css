@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~animate.css/animate.css";
 
 html, body {
   height: 100%;
@@ -7,4 +8,53 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 96%;
+  max-width: 130rem;
+}
+
+.spacer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block {
+  display: block;
+}
+
+img {
+  max-width: 290px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.my-2 {
+  margin: 10px 0;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
