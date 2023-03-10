@@ -21,9 +21,16 @@
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <button mat-icon-button color="warn">
-      <mat-icon>logout</mat-icon>
-    </button>
+    <div style="display: flex; align-items: center;">
+      <span>{{ auth.usuario }}</span>
+      <button
+        mat-icon-button
+        color="warn"
+        (click)="logout()">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </div>
+
   </mat-toolbar>
 
   <!--  Inyectar el contenido de las rutas hijas -->

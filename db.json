@@ -166,6 +166,24 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "superhero": "Batman ",
+      "alter_ego": "Batman",
+      "characters": "Batman",
+      "first_appearance": "Batman",
+      "publisher": "Marvel Comics",
+      "alt_img": "https://i.pinimg.com/736x/22/46/b4/2246b4c969916cbf7c6f90ebcf6a8ca6.jpg",
+      "id": "byAcsoL"
+    },
+    {
+      "superhero": "Héroe de prueba",
+      "alter_ego": "prueba",
+      "characters": "prueba",
+      "first_appearance": "Prueba",
+      "publisher": "Marvel Comics",
+      "alt_img": "https://w7.pngwing.com/pngs/755/313/png-transparent-batman-batgirl-cartoon-comics-super-hero-comics-superhero-cartoon.png",
+      "id": "ghFNuHx"
     }
   ]
 }
